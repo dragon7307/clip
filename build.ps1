@@ -1,1 +1,0 @@
-clang main.c -o main.exe -luser32 -DVERSION="1.0.0"

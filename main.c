@@ -51,7 +51,7 @@ static int set_clipboard_text(const char* text)
     if(clipboardTextHandle == NULL)
     {
         fprintf(stderr, "Failed to allocate memory for clipboard\n");
-        return 1;
+        goto close_clipboard;
     }
 
     LPTSTR clipboardText = (LPTSTR) GlobalLock(clipboardTextHandle);
@@ -80,6 +80,6 @@ static int set_clipboard_text(const char* text)
         DWORD error = GetLastError();
         char errorMessage[256];
         FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, NULL, error, 0, errorMessage, sizeof(errorMessage), NULL);
-        fprintf(stderr, "Error: %s\n", errorMessage); 
+        fprintf(stderr, "Error: %s\n", errorMessage);
         return 1;
 }
