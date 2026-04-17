@@ -16,13 +16,13 @@ int main(int argc, const char* argv[])
         return 1;
     }
 
-    if(strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-?") == 0) 
+    if(strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-?") == 0)
     {
         printf("Usage: clip <file_path>\n");
         return 0;
     }
     
-    if(strcmp(argv[1], "-v") == 0 || strcmp(argv[1], "--version") == 0) 
+    if(strcmp(argv[1], "-v") == 0 || strcmp(argv[1], "--version") == 0)
     {
         printf("%s\n", VERSION);
         return 0;
